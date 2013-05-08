@@ -17,6 +17,7 @@ var func2 = function(a,b) {
   return "YAY";
 }
 
-var chained = new Chain(func1, func2).runner();
+var chained = new Chain(func1);
+chained.use(func2);
 console.log(chained(5,12));
 ```
